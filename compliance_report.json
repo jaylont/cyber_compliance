@@ -1,0 +1,133 @@
+{
+  "scan_date": "2025-12-05T19:34:26.010193",
+  "system": "Darwin",
+  "results": {
+    "passed": [
+      {
+        "check": "SSH Configuration",
+        "status": "PASS",
+        "message": "All SSH hardening checks passed (4/4)",
+        "frameworks": [
+          "CIS-5.2.4",
+          "NIST-AC-17",
+          "ISO27001-A.13.1.1"
+        ],
+        "timestamp": "2025-12-05T19:34:15.852286"
+      },
+      {
+        "check": "Disk Encryption",
+        "status": "PASS",
+        "message": "FileVault disk encryption is enabled",
+        "frameworks": [
+          "CIS-1.1.1",
+          "NIST-SC-28",
+          "ISO27001-A.10.1.1"
+        ],
+        "timestamp": "2025-12-05T19:34:15.991945"
+      },
+      {
+        "check": "Critical File Permissions",
+        "status": "PASS",
+        "message": "Critical file permissions are correct",
+        "frameworks": [
+          "CIS-6.1.2",
+          "NIST-AC-6",
+          "ISO27001-A.9.4.1"
+        ],
+        "timestamp": "2025-12-05T19:34:16.004637"
+      },
+      {
+        "check": "Antivirus Protection",
+        "status": "PASS",
+        "message": "XProtect is built into macOS",
+        "frameworks": [
+          "NIST-SI-3",
+          "ISO27001-A.12.2.1"
+        ],
+        "timestamp": "2025-12-05T19:34:26.009833"
+      }
+    ],
+    "failed": [
+      {
+        "check": "Firewall Status",
+        "status": "FAIL",
+        "message": "Firewall is not enabled",
+        "remediation": "Enable firewall in System Preferences > Security",
+        "frameworks": [
+          "CIS-3.5.1.1",
+          "NIST-SC-7",
+          "ISO27001-A.13.1.1"
+        ],
+        "timestamp": "2025-12-05T19:34:15.818555"
+      },
+      {
+        "check": "Automatic Updates",
+        "status": "FAIL",
+        "message": "Automatic updates not configured",
+        "remediation": "Enable in System Preferences > Software Update",
+        "frameworks": [
+          "CIS-1.8",
+          "NIST-SI-2",
+          "ISO27001-A.12.6.1"
+        ],
+        "timestamp": "2025-12-05T19:34:15.872262"
+      },
+      {
+        "check": "Screen Lock",
+        "status": "FAIL",
+        "message": "Screen lock not configured",
+        "remediation": "Enable in System Preferences > Security > Require password",
+        "frameworks": [
+          "CIS-1.5.2",
+          "NIST-AC-11",
+          "ISO27001-A.11.2.8"
+        ],
+        "timestamp": "2025-12-05T19:34:16.004486"
+      }
+    ],
+    "warnings": [
+      {
+        "check": "Password Policy",
+        "status": "WARNING",
+        "message": "Cannot verify password policy",
+        "frameworks": [
+          "CIS-5.4.1",
+          "NIST-IA-5",
+          "ISO27001-A.9.4.3"
+        ],
+        "timestamp": "2025-12-05T19:34:15.851703"
+      },
+      {
+        "check": "Audit Logging",
+        "status": "WARNING",
+        "message": "Cannot verify audit logging",
+        "frameworks": [
+          "CIS-4.1.1.1",
+          "NIST-AU-2",
+          "ISO27001-A.12.4.1"
+        ],
+        "timestamp": "2025-12-05T19:34:26.009478"
+      }
+    ],
+    "info": [
+      {
+        "check": "User Account Security",
+        "status": "INFO",
+        "message": "User account check not applicable on macOS",
+        "frameworks": [
+          "CIS-5.4.1.1",
+          "NIST-IA-5",
+          "ISO27001-A.9.2.1"
+        ],
+        "timestamp": "2025-12-05T19:34:16.004564"
+      }
+    ]
+  },
+  "summary": {
+    "total": 9,
+    "passed": 4,
+    "failed": 3,
+    "warnings": 2,
+    "score": 44.44444444444444
+  }
+}
